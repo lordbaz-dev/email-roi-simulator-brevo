@@ -1,73 +1,86 @@
-# Welcome to your Lovable project
+# Brevo Email Marketing ROI Calculator
 
-## Project info
+A professional ROI calculator for email marketing campaigns with realistic industry benchmarks and Email + SMS synergy calculations.
 
-**URL**: https://lovable.dev/projects/30f32bfa-f221-4592-b3b2-a321963da75a
+## Features
 
-## How can I edit this code?
+- **Realistic Benchmarks** - Based on 2025 industry data
+  - Email: 25% open rate, 4% CTR, 15% conversion
+  - SMS: 98% open rate, 12% CTR, 32% conversion
+- **Email + SMS Synergies** - Calculate combined channel impact (+40% conversion boost)
+- **Revenue-Based ROI** - Monthly revenue as the calculation base
+- **Brevo Feature Impact** - See how AI, automation, segmentation improve metrics
+- **Educational Sections** - "How It Works" explains the funnel and business impact
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- React + TypeScript
+- Vite
+- TailwindCSS + shadcn/ui
+- Recharts for visualizations
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/30f32bfa-f221-4592-b3b2-a321963da75a) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Installation
 
-**Use your preferred IDE**
+```bash
+npm install
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Development
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open [http://localhost:8080](http://localhost:8080) in your browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The built files will be in the `dist/` folder.
 
-## What technologies are used for this project?
+### Preview Production Build
 
-This project is built with:
+```bash
+npm run preview
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Project Structure
 
-## How can I deploy this project?
+```
+src/
+├── components/
+│   ├── roi-calculator/
+│   │   ├── ROICalculator.tsx          # Main calculator component
+│   │   ├── TwoStepCalculatorInputs.tsx # Left panel with inputs
+│   │   ├── TwoStepCalculatorResults.tsx # Right panel with results
+│   │   ├── calculator-logic.ts         # ROI calculation logic
+│   │   └── types.ts                    # TypeScript types
+│   └── ui/                             # shadcn/ui components
+├── pages/
+│   └── Index.tsx                       # Main page
+└── main.tsx                            # App entry point
+```
 
-Simply open [Lovable](https://lovable.dev/projects/30f32bfa-f221-4592-b3b2-a321963da75a) and click on Share -> Publish.
+## Deployment
 
-## Can I connect a custom domain to my Lovable project?
+### Netlify / Vercel
 
-Yes, you can!
+1. Connect your GitHub repository
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
+4. Deploy!
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### GitHub Pages
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. Build the project: `npm run build`
+2. Push the `dist` folder to a `gh-pages` branch
+3. Enable GitHub Pages in repository settings
+
+## License
+
+MIT
